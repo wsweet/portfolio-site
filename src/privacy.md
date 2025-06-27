@@ -1,18 +1,10 @@
----
-title: Privacy Policy
+⸻
+title: Privacy
 layout: layout.njk
----
 
-## Privacy Policy
+<section class="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+  <h1 class="text-3xl font-bold mb-6">Privacy</h1>
 
-Let’s keep this simple.
+  <p class="text-gray-700 mb-6">This site is just for fun. I use Google Analytics, and Google Analytics uses cookies to work. I'm only using Analytics to understand traffic patterns and which pages people are interested in. I'm not using this data for anything sinister. Relax, browse freely, and know you're not being tracked in any creepy or commercial way.</p>
 
-This website exists for personal and professional fun (mostly to show off some side projects and data experiments). There’s no tracking for ads, no dark patterns, and no shady stuff.
-
-I use Google Analytics to understand how the site’s being used (e.g. what pages people visit). That’s it. It’s all anonymous and aggregate, and I’m not selling or sharing your data. Mostly I’m just glad someone made it this far.
-
-If you’re concerned, feel free to browse in incognito mode — no hard feelings.
-
-Thanks for visiting!
-
-– Will
+</section>
