@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
 
+    <!-- CookieConsent CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
     <!-- Google Tag Manager -->
     <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KRGN6XPW');
@@ -43,7 +46,45 @@
     <footer class="border-t border-gray-200 mt-12 text-sm text-gray-600">
       <div class="max-w-3xl mx-auto px-4 py-6">
         <p>&copy; 2025 William Sweet. Built with Eleventy & Tailwind CSS.</p>
+        <a href="/privacy" class="underline hover:text-gray-700 transition">Privacy</a>
       </div>
     </footer>
+
+    <!-- CookieConsent JS -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: {
+              background: "#000"
+            },
+            button: {
+              background: "#f1d600",
+              text: "#000"
+            }
+          },
+          theme: "classic",
+          content: {
+            message: "This site uses cookies for analytics. ",
+            dismiss: "Got it!",
+            link: "Learn more",
+            href: "/privacy"
+          },
+          onInitialise: function (status) {
+            if (status === cookieconsent.status.allow) {
+              dataLayer.push({ event: "cookieConsentAccepted" });
+            }
+          },
+          onStatusChange: function (status) {
+            if (status === cookieconsent.status.allow) {
+              dataLayer.push({ event: "cookieConsentAccepted" });
+            }
+          }
+        });
+      });
+    </script>
+
   </body>
 </html>
