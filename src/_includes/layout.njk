@@ -1,91 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-    <!-- CookieConsent CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
+  
     <!-- Google Tag Manager -->
     <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KRGN6XPW');
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KRGN6XPW');
     </script>
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8" />
     <title>{{ title or "William Sweet" }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+    
   </head>
-  <body class="bg-white text-gray-900 font-sans leading-relaxed">
 
+  <body class="overflow-y-scroll bg-white text-gray-900 font-sans leading-relaxed">
     <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRGN6XPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRGN6XPW"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header -->
-    <header class="border-b border-gray-200 mb-8">
-      <div class="max-w-3xl mx-auto px-4 py-6 flex justify-between items-center">
-        <h1 class="text-xl font-semibold">
-          <a href="/" class="hover:underline">William Sweet</a>
-        </h1>
-        <nav class="space-x-4 text-sm">
-          <a href="/about/" class="hover:underline">About</a>
-          <a href="/projects/" class="hover:underline">Projects</a>
-          <a href="/freelance" class="hover:underline">Freelance</a>
-          <a href="/contact/" class="hover:underline">Contact</a>
+    {% set current = page.url %}
+    <!-- Sticky Header -->
+    <header class="sticky top-0 bg-white z-50 border-b border-gray-200">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="/">
+          <img src="/assets/favicon.png" alt="WJS logo" class="h-8 w-8" />
+        </a>
+        <!-- Desktop Nav -->
+        <nav class="hidden sm:flex items-center space-x-6 text-sm">
+          <a href="/" class="hover:underline {{ 'font-semibold' if current == '/' else '' }}">Home</a>
+          <a href="/about/" class="hover:underline {{ 'font-semibold' if current == '/about/' else '' }}">About</a>
+          <a href="/projects/" class="hover:underline {{ 'font-semibold' if current == '/projects/' else '' }}">Projects</a>
+          <a href="/freelance/" class="hover:underline {{ 'font-semibold' if current == '/freelance/' else '' }}">Freelance</a>
+          <a href="/contact/" class="inline-flex items-center px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition {{ 'ring-2 ring-blue-700' if current == '/contact/' else '' }}">Contact</a>
         </nav>
+        <!-- Mobile Toggle -->
+        <button id="nav-toggle" class="sm:hidden text-gray-700 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="sm:hidden hidden bg-white border-t border-gray-200">
+        <ul class="space-y-2 py-2 px-4 text-sm">
+          <li><a href="/" class="block hover:underline {{ 'font-semibold' if current == '/' else '' }}">Home</a></li>
+          <li><a href="/about/" class="block hover:underline {{ 'font-semibold' if current == '/about/' else '' }}">About</a></li>
+          <li><a href="/projects/" class="block hover:underline {{ 'font-semibold' if current == '/projects/' else '' }}">Projects</a></li>
+          <li><a href="/freelance/" class="block hover:underline {{ 'font-semibold' if current == '/freelance/' else '' }}">Freelance</a></li>
+          <li><a href="/contact/" class="block inline-flex items-center px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition {{ 'ring-2 ring-blue-700' if current == '/contact/' else '' }}">Contact</a></li>
+        </ul>
       </div>
     </header>
 
     <!-- Main content -->
-    <main class="max-w-3xl mx-auto px-4 pb-20">
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20">
       {{ content | safe }}
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-200 mt-12 text-sm text-gray-600">
-      <div class="max-w-3xl mx-auto px-4 py-6">
-        <p>&copy; 2025 William Sweet. Built with Eleventy & Tailwind CSS.</p>
-        <a href="/privacy" class="underline hover:text-gray-700 transition">Privacy</a>
-      </div>
+    <footer class="border-t border-gray-200 mt-12 text-sm text-gray-600 text-center py-6 space-x-4">
+      <span>© 2025 William Sweet. All rights reserved.</span>
+      <a href="/privacy" class="underline hover:text-gray-700">Privacy</a>
     </footer>
 
     <!-- CookieConsent JS -->
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-
     <script>
       window.addEventListener("load", function () {
         window.cookieconsent.initialise({
-          palette: {
-            popup: {
-              background: "#000"
-            },
-            button: {
-              background: "#f1d600",
-              text: "#000"
-            }
-          },
+          palette: {popup: {background: "#000"}, button: {background: "#f1d600", text: "#000"}},
           theme: "classic",
-          content: {
-            message: "This site uses cookies for analytics. ",
-            dismiss: "Got it!",
-            link: "Learn more",
-            href: "/privacy"
-          },
-          onInitialise: function (status) {
-            if (status === cookieconsent.status.allow) {
-              dataLayer.push({ event: "cookieConsentAccepted" });
-            }
-          },
-          onStatusChange: function (status) {
-            if (status === cookieconsent.status.allow) {
-              dataLayer.push({ event: "cookieConsentAccepted" });
-            }
-          }
+          content: {message: "This site uses cookies for analytics.", dismiss: "Got it!", link: "Learn more", href: "/privacy"},
+          onInitialise: function(status) { if (status === cookieconsent.status.allow) { dataLayer.push({ event: "cookieConsentAccepted" }); } },
+          onStatusChange: function(status) { if (status === cookieconsent.status.allow) { dataLayer.push({ event: "cookieConsentAccepted" }); } }
         });
       });
     </script>
 
+    <!-- Mobile nav toggle script -->
+    <script>
+      document.getElementById('nav-toggle').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
   </body>
 </html>

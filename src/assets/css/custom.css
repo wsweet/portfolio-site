@@ -1,0 +1,43 @@
+/* src/assets/css/custom.css */
+
+/* Simplified static gradients with fade-on-hover via opacity */
+
+/* Sunset Burst Gradient */
+.btn-gradient-sunset {
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  color: white;
+  transition: opacity 0.4s ease;
+}
+.btn-gradient-sunset:hover {
+  opacity: 0.8;
+}
+
+/* Ocean Wave Gradient */
+.btn-gradient-ocean {
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: white;
+  transition: opacity 0.4s ease;
+}
+.btn-gradient-ocean:hover {
+  opacity: 0.8;
+}
+
+/* Purple Dream Gradient */
+.btn-gradient-purple-dream {
+  background: linear-gradient(45deg, #7f00ff 0%, #e100ff 100%);
+  color: white;
+  transition: opacity 0.4s ease;
+}
+.btn-gradient-purple-dream:hover {
+  opacity: 0.8;
+}
+
+/* Aurora Glow Gradient */
+.btn-gradient-aurora {
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 25%, #a6c1ee 50%, #d4fc79 75%, #96e6a1 100%);
+  color: white;
+  transition: opacity 0.4s ease;
+}
+.btn-gradient-aurora:hover {
+  opacity: 0.8;
+}

@@ -3,7 +3,7 @@ layout: layout.njk
 title: Freelance
 ---
 
-<section class="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+<section class="py-12">
   <h1 class="text-3xl font-bold mb-6">Available for Freelance Projects</h1>
   <p class="mb-8 text-gray-700">I help businesses grow by blending customer insight, data, and digital execution. If you need clarity, traction, or just someone to cut through the noise, I’m available.</p>
 
@@ -29,7 +29,7 @@ title: Freelance
   <div class="mt-8 text-center">
     <a
         href="/contact/"
-        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-md hover:bg-blue-700 transition"
+        class="btn-gradient-purple-dream inline-block px-6 py-3 rounded-md hover:opacity-90 transition"
     >
         Get in Touch
     </a>
