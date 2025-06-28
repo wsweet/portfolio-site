@@ -1,0 +1,12 @@
+{# src/_includes/nav.njk #}
+{% set current = page.url %}
+<nav class="hidden sm:flex items-center space-x-6 text-sm">
+  <a href="/" class="hover:underline {{ 'font-semibold' if current == '/' else '' }}">Home</a>
+  <a href="/about/" class="hover:underline {{ 'font-semibold' if current == '/about/' else '' }}">About</a>
+  <a href="/projects/" class="hover:underline {{ 'font-semibold' if current == '/projects/' else '' }}">Projects</a>
+  <a href="/freelance/" class="hover:underline {{ 'font-semibold' if current == '/freelance/' else '' }}">Freelance</a>
+  <a href="/contact/"
+     class="inline-flex items-center px-4 py-2 rounded text-white btn-gradient-purple-dream transition {{ 'ring-2 ring-blue-700' if current == '/contact/' else '' }}">
+    Contact
+  </a>
+</nav>
