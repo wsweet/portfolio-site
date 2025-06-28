@@ -1,0 +1,47 @@
+<!-- Desktop nav -->
+<div class="hidden md:flex items-center space-x-6">
+  <a href="/" class="text-base text-gray-800 hover:text-black">Home</a>
+  <a href="/about/" class="text-base text-gray-800 hover:text-black">About</a>
+  <a href="/projects/" class="text-base text-gray-800 hover:text-black">Projects</a>
+  <a href="/freelance/" class="text-base text-gray-800 hover:text-black">Freelance</a>
+  <a href="/contact/" class="inline-block rounded px-4 py-2 text-base font-medium btn-gradient-purple-dream">
+    Contact
+  </a>
+</div>
+
+<!-- Mobile toggle: visible only below md -->
+<button 
+  id="menu-toggle"
+  class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-black hover:bg-gray-100"
+  aria-controls="mobile-menu"
+  aria-expanded="false"
+>
+  <span class="sr-only">Open main menu</span>
+  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+</button>
+
+<!-- Mobile overlay -->
+<div class="fixed top-16 left-0 w-full bg-white border-b border-gray-200 md:hidden hidden z-50" id="mobile-menu">
+  <div class="flex flex-col px-4 py-4 space-y-2">
+    <a href="/" class="block w-full py-3 px-4">Home</a>
+    <a href="/about/" class="block w-full py-3 px-4">About</a>
+    <a href="/projects/" class="block w-full py-3 px-4">Projects</a>
+    <a href="/freelance/" class="block w-full py-3 px-4">Freelance</a>
+    <a href="/contact/" class="block w-full text-center px-4 py-3 font-medium rounded btn-gradient-purple-dream">
+      Contact
+    </a>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true' || false;
+    toggle.setAttribute('aria-expanded', !expanded);
+    menu.classList.toggle('hidden');
+  });
+</script>

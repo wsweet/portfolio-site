@@ -45,7 +45,7 @@ title: About
   </ul>
   <h2 class="text-2xl font-semibold mt-10">Education & Certifications</h2>
   <ul class="list-disc list-inside mt-2">
-    <li>BA Marketing Management (1st Class) — De Montfort University</li>
+    <li>BA (Hons) Marketing Management (1st Class) — De Montfort University</li>
     <li>BerkeleyX: Marketing Analytics (edX)</li>
     <li>Google: Analytics, Ads & Search certified</li>
     <li>Jobs-to-be-Done Interview training</li>
