@@ -1,7 +1,5 @@
 /* src/assets/css/custom.css */
 
-/* Simplified static gradients with fade-on-hover via opacity */
-
 /* Sunset Burst Gradient */
 .btn-gradient-sunset {
   background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);

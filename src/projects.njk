@@ -1,0 +1,25 @@
+---
+title: Projects
+layout: base.njk
+---
+
+<h1 class="text-3xl font-bold mb-6">Projects</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {% for project in collections.projects %}
+    <a href="{{ project.url }}" class="block border rounded-lg p-4 hover:shadow transition">
+      {% if project.data.image %}
+        <img src="{{ project.data.image }}" alt="{{ project.data.title }}" class="mb-4 rounded">
+      {% endif %}
+      <h2 class="text-xl font-semibold mb-2">{{ project.data.title }}</h2>
+      <p class="text-gray-600 mb-2">{{ project.data.summary }}</p>
+      {% if project.data.tools %}
+        <div class="flex flex-wrap gap-2">
+          {% for tool in project.data.tools %}
+            <span class="text-xs bg-gray-200 rounded px-2 py-1">{{ tool }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>

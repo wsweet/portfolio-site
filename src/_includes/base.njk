@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title or "Will Sweet" }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KRGN6XPW');
+  </script>
+   <!-- End Google Tag Manager -->
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/custom.css" />
+
+</head>
+
+<body class="overflow-y-scroll bg-white text-gray-900 font-sans leading-relaxed">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRGN6XPW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+  {% include "partials/header.njk" %}
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <!-- CookieConsent JS -->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        palette: {popup: {background: "#000"}, button: {background: "#f1d600", text: "#000"}},
+        theme: "classic",
+        content: {message: "This site uses cookies for analytics.", dismiss: "Got it!", link: "Learn more", href: "/privacy"},
+        onInitialise: function(status) { if (status === cookieconsent.status.allow) { dataLayer.push({ event: "cookieConsentAccepted" }); } },
+        onStatusChange: function(status) { if (status === cookieconsent.status.allow) { dataLayer.push({ event: "cookieConsentAccepted" }); } }
+      });
+    });
+  </script>
+
+</body>
+</html>
