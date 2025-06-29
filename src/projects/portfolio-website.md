@@ -41,8 +41,13 @@ I started with a blank Eleventy site and a few stubborn ideas: simple folder str
 **Stack & tools**
 
 Eleventy - for the static site magic
+
 Tailwind CSS - (CDN) for utility-first styling with zero build friction
+
 Custom gradients - for some fun buttons
+
 Netlify - for dead-simple deploys
+
 Git & GitHub - for version control
+
 ChatGPT - for pair programming my overthinking brain!
