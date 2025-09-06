@@ -2,7 +2,7 @@
 title: "F1 Stats Replay (CLI Tool)"
 description: "A Python command-line interface for analysing and replaying historical Formula 1 race data."
 date: 2025-09-06
-tags: ["cli", "data-engineering", "python", "fastf1"]
+tags: ["projetcs"]
 ---
 
 ### Project Overview
