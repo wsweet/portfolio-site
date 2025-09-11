@@ -1,11 +1,13 @@
-<header class="flex justify-between items-center h-16 px-4">
-  <!-- LEFT: Logo -->
-  <a href="/">
-    <img src="/assets/favicon.png" alt="WJS logo" class="h-8 w-8">
-  </a>
-
-  <!-- RIGHT: Nav partial wrapped in a flex container -->
-  <div class="flex items-center">
-    {% include "partials/nav.njk" %}
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/assets/favicon.png" alt="WJS logo" class="image is-32x32">
+    </a>
   </div>
-</header>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      {% include "partials/nav.njk" %}
+    </div>
+  </div>
+</nav>

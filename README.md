@@ -50,7 +50,6 @@ src/
 
 ## ✅ Styles
 
-- Tailwind is loaded via **CDN** — no local build step needed.
 - Custom gradient button classes live in `src/assets/css/custom.css`.
 - The styles are linked in `base.njk`:
 

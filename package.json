@@ -1,20 +1,20 @@
 {
   "name": "portfolio-site",
   "version": "1.0.0",
+  "description": "Personal portfolio to showcase revenue analytics, data viz, and technical marketing work.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind:init": "tailwindcss init -p",
-    "build:css": "npx tailwindcss -i ./src/styles/main.css -o ./src/assets/styles.css --minify"
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "eleventy",
+    "portfolio",
+    "data-viz"
+  ],
+  "author": "William Sweet",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.1",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
-  },
-  "description": ""
+    "@11ty/eleventy": "^3.1.1"
+  }
 }
