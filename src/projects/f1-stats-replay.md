@@ -29,7 +29,7 @@ layout: layouts/project.njk
   <p>I wanted to build a backend tool that could demonstrate a full data workflow, from API integration to data processing and structured output, all within a clean and usable command-line interface. The challenge was to create a tool that was both technically robust and intuitive to use, without relying on a graphical front-end.</p>
 
   <h2 class="title is-4">How I made it</h2>
-  <p>I started with the "FastF1" Pythong Library as the data source, as it provides rich telemetry data for all Grand Prix races. The data was then processed using the "pandas" library to perform calculations and structure the output. Finally, I used the "argparse" library to create the command-line interface, making the tool easy to navigate. The entire project was built in Python.</p>
+  <p>I started with the "FastF1" Python Library as the data source, as it provides rich telemetry data for all Grand Prix races. The data was then processed using the "pandas" library to perform calculations and structure the output. Finally, I used the "argparse" library to create the command-line interface, making the tool easy to navigate. The entire project was built in Python.</p>
 
   <h2 class="title is-4">Stack & tools</h2>
   <ul>
