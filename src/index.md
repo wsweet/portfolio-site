@@ -9,7 +9,7 @@ title: Home
 
 <section class="section has-background-light">
   <div class="container has-text-centered">
-    <h2 class="title is-4 mb-4">🧑‍💻 Freelance Services</h2>
+    <h2 class="title is-4">🧑‍💻 Freelance Services</h2>
     <p class="subtitle is-6 has-text-grey-dark">I’m available for freelance projects in ads, analytics, and strategy. <br><a href="/freelance" class="has-text-info">Learn more →</a></p>
   </div>
 </section>

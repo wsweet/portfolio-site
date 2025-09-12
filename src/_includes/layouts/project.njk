@@ -2,10 +2,11 @@
 layout: base.njk
 ---
 
-<main class="section">
-  <div class="container">
+<section class="section">
+  <div class="container is-max-desktop">
+    <h1 class="title is-2 mb-4">{{ title }}</h1>
     <div class="content">
       {{ content | safe }}
     </div>
   </div>
-</main>
+</section>

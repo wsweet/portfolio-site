@@ -8,26 +8,26 @@ layout: base.njk
 <div class="columns is-multiline is-variable is-6">
   {% for project in collections.projects %}
     <div class="column is-half-tablet">
-      <div class="card is-flex is-flex-direction-column is-full-height">
+      <a href="{{ project.url }}" class="card is-flex is-flex-direction-column is-full-height has-text-grey-darker">
         <div class="card-image">
           {% if project.data.image %}
-            <figure class="image">
+            <figure class="image is-16by9">
               <img src="{{ project.data.image }}" alt="{{ project.data.title }}">
             </figure>
           {% endif %}
         </div>
-        <div class="card-content">
-          <h2 class="title is-4 mb-2">{{ project.data.title }}</h2>
-          <p class="subtitle is-6 has-text-grey-darker mb-4">{{ project.data.summary }}</p>
+        <div class="card-content is-flex is-flex-direction-column">
+          <h2 class="title is-4 mb-6">{{ project.data.title }}</h2>
+          <p class="subtitle is-6 mb-8">{{ project.data.summary }}</p>
           {% if project.data.tools %}
-            <div class="tags is-flex is-flex-wrap-wrap">
+            <div class="tags mt-auto">
               {% for tool in project.data.tools %}
                 <span class="tag is-info">{{ tool }}</span>
               {% endfor %}
             </div>
           {% endif %}
         </div>
-      </div>
+      </a>
     </div>
   {% endfor %}
 </div>

@@ -13,27 +13,27 @@ title: Freelance
   
   <div class="container">
     <div class="block">
-      <h2 class="title is-5 mb-2">🚀 Paid Ads Management</h2>
+      <h2 class="title is-5 mb-4">🚀 Paid Ads Management</h2>
       <p class="has-text-grey-dark">Google Search, Facebook, LinkedIn, Reddit, Bing, Display, I’ve run them all! From targeting to copy, creative to reporting, I help businesses run smarter, better-performing campaigns.</p>
     </div>
     <div class="block">
-        <h2 class="title is-5 mb-2">📊 Analytics Setup & Tagging</h2>
-        <p class="has-text-grey-dark">Need your tracking fixed (or started)? I offer clean, scalable setups using Google Tag Manager and GA4 (With full documentation and training).</p>
+        <h2 class="title is-5 mb-4">📊 Analytics Setup & Tagging</h2>
+        <p class="has-text-dark">Need your tracking fixed (or started)? I offer clean, scalable setups using Google Tag Manager and GA4 (With full documentation and training).</p>
     </div>
     <div class="block">
-        <h2 class="title is-5 mb-2">🔍 Strategy & Research</h2>
-        <p class="has-text-grey-dark">I blend customer research (JTBD, Switch interviews, surveys) with hands-on analytics (SQL, Python, dashboards) to uncover what drives buying (and how to act on it). From value props to product specs to go-to-market plans.</p>
+        <h2 class="title is-5 mb-4">🔍 Strategy & Research</h2>
+        <p class="has-text-dark">I blend customer research (JTBD, Switch interviews, surveys) with hands-on analytics (SQL, Python, dashboards) to uncover what drives buying (and how to act on it). From value props to product specs to go-to-market plans.</p>
     </div>
     <div class="block">
-        <h2 class="title is-5 mb-2">🧠 Other Projects</h2>
-        <p class="has-text-grey-dark">I've helped teams with CRO, pricing experiments, product positioning, offer design and even internal tools. If it’s strategic, scrappy, and revenue-linked; I’m keen.</p>
+        <h2 class="title is-5 mb-4">🧠 Other Projects</h2>
+        <p class="has-text-dark">I've helped teams with CRO, pricing experiments, product positioning, offer design and even internal tools. If it’s strategic, scrappy, and revenue-linked; I’m keen.</p>
     </div>
   </div>
 
   <div class="has-text-centered mt-6">
     <a
         href="/contact/"
-        class="button is-rounded is-large btn-gradient-purple-dream"
+        class="button is-rounded is-large btn-gradient-purple-dream has-text-white"
     >
         Get in Touch
     </a>

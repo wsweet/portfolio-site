@@ -3,11 +3,27 @@
     <a class="navbar-item" href="/">
       <img src="/assets/favicon.png" alt="WJS logo" class="image is-32x32">
     </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-links" id="nav-toggle">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
 
-  <div class="navbar-end">
-    <div class="navbar-item">
-      {% include "partials/nav.njk" %}
+  <div id="nav-links" class="navbar-menu">
+    <div class="navbar-end">
+      <a href="/" class="navbar-item">Home</a>
+      <a href="/about/" class="navbar-item">About</a>
+      <a href="/projects/" class="navbar-item">Projects</a>
+      <a href="/freelance/" class="navbar-item">Freelance</a>
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="/contact/" class="button is-rounded btn-gradient-purple-dream has-text-white">
+            <strong>Contact</strong>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
